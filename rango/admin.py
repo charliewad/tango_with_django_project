@@ -1,5 +1,5 @@
 from django.contrib import admin
-from rango.models import Category, Page, Question, Choice
+from rango.models import Category, Page, UserProfile, Question, Choice
 
 # Register your models here.
 
@@ -21,6 +21,8 @@ class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 3
 
+
+admin.site.register(UserProfile)
 
 class QuestionAdmin(admin.ModelAdmin):
     fieldsets = [
